@@ -1,0 +1,15 @@
+---
+title: "Intro_Stat_Learn"
+author: "Ivan"
+date: "2026-07-22"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. regression 
+
+
+
