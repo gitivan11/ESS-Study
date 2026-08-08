@@ -1,0 +1,36 @@
+$$ f_X(x) = \frac{\theta 2^{\theta}}{x^{\theta+1}} \mathbf{1}_[2, +\infty) (x) 
+$$
+
+## (a) Find a complete sufficient statistic ##
+
+**Solution**: 
+
+$$ S = \sum_i \ln X_i \text{ is complete and sufficient by the prop of full rank exponential family} 
+$$ 
+
+## (b) Find MLE $\hat{\theta}$ ##
+
+**Solution**: 
+
+$$
+\begin{aligned} 
+\text{(1)} \qquad &
+\ell(\theta)
+= n \ln \theta
++ n\theta \ln 2
+- (\theta + 1)\sum_i \ln x_i
+\\[1em]
+
+\text{(2)} \qquad &
+\frac{\partial \ell(\theta)}{\partial \theta} = 0
+\quad \implies \quad
+{\color{red}
+\boxed{
+\color{white}
+\hat{\theta}_{\mathrm{MLE}}
+=
+\frac{n}{\sum_i \ln(X_i/2)}
+}}
+\end{aligned}
+$$
+
