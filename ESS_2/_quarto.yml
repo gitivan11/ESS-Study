@@ -14,10 +14,9 @@ book:
     - fin_anal.qmd
     - real_anal.qmd
     - intro_stat_learning.qmd
+    - Stats_practice.qmd
     - thesis_remarks.qmd
     - references.qmd
-    - Stats_practice.qmd
-
 
 bibliography: references.bib
 
