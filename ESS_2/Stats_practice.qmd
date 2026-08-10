@@ -127,6 +127,22 @@ C
 \mathbb{E}\!\left[\hat{\theta}_{\mathrm{MLE}}\right]
 =
 \frac{n\theta}{n-1}
-}}
+}} \implies \text{ the estimator is biased.}\\[0.5em]
+\text{ (5) MSE:}& \mathrm{MSE}(\hat{\theta}) = \mathrm{Bias}^2(\hat{\theta}) + \mathrm{Var}(\hat{\theta})\\[0.5em]
+\text{ (5.1) Calc second momemt:}& \mathbb{E}(S^{-2}) \underbrace{=}_{\text{if} n>2} \frac{\theta^2}{(n-1)(n-2)} \implies \mathbb{E}(\hat{\theta}^2_{\mathrm{MLE}}) = \frac{n^2 \theta^2}{(n-1)(n-2)} \implies \mathrm{Var} (\hat{\theta}) = \frac{n^2 \theta^2}{(n-1)(n-2)} - \frac{n^2 \theta^2}{(n-1)^2} = \frac{n^2 \theta^2}{(n-1)^2 (n-2)} \implies \\[0.5em]
+\implies \mathrm{MSE}(\hat{\theta}) = \frac{n^2 \theta^2}{(n-1)^2 (n-2)} + \frac{\theta^2}{(n-1)^2} = \frac{(n+2)(n-1)\theta^2}{(n-1)^2 (n-2)} = {\color{red}\boxed{\color{black}{\frac{n+2}{(n-1)(n-2)} \theta}}}
 \end{array}
 $$
+
+## (d) obtain asymptotic interval for $x_m$ ##
+$$
+\begin{array}{ll}
+\text{ (1) asymptotic var prop }:& \hat{\theta} \text{ is MLE } \implies 2^{1 + \frac{1}{\hat{\theta}}} \text{ is MLE } for 2^{1 + \frac{1}{\theta}}\\[0.5em]
+\text{ (2) By CLT + asymptotic prop of MLE:}& \hat{\theta} \sim \mathcal{N}(\theta, \frac{1}{I_{\underline{X}}(\theta)})\\[0.5em]
+\text{ (3) By Delta method, } \tilde{\theta} = g(\hat{\theta}) \sim \mathcal{N}(g(\theta), \frac{(g'(\theta))^2}{I_{\underline{X}}(\theta)}) \text{ where } (g'(\theta ))^2 = (2^{1 + \frac{1}{\theta}} \ln 2 (-1) \frac{1}{\theta^2})^2 = 2^{2(1 + \frac{1}{\theta})} (\ln 2)^2 \frac{1}{\theta^4}\\[0.5em]
+\text{ (4) now obtain Fischer for the sample}& 
+I_{\underline{X}}(\theta) = - \mathbb{E}(\frac{\partial^2 \ell }{\partial {\theta}^2}) = \frac{n}{\theta^2}\\[0.5em]
+\text{ (5) now calculate the asympt variance}& \mathrm{Avar}(\tilde{\theta}) = 2^{2(1 + \frac{1}{\theta})} (\ln 2)^2 \frac{1}{n \theta^2} \implies x_m \in \tilde{\theta} \pm z_{\alpha/2} \frac{2^{1 + \frac{1}{\hat{\theta}} \ln 2}}{\hat{\theta} \sqrt{n}}
+\end{array}
+$$
+
